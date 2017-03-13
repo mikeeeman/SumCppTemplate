@@ -8,14 +8,6 @@ const int numbers = 40;
 
 namespace bfh
 {
-    template <class T>
-        inline void sum(T& result, const vector<T>& newData)
-        {
-            for (unsigned int index = 0 ; index < newData.size() ; index++)
-            {
-                result += newData.at(index);
-            }
-        }
         template <class T, class U>
         inline void fillUp(vector<T>& newdata, U& size)
         {
@@ -24,8 +16,15 @@ namespace bfh
                 newdata.push_back(idx);
             }
         }
+        template <class T>
+        inline void sum(T& result, const vector<T>& newData)
+        {
+            for (unsigned int index = 0 ; index < newData.size() ; index++)
+            {
+                result += newData.at(index);
+            }
+        }
 }
-
 
 int main(void)
 {
